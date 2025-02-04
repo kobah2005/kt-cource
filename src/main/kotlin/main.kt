@@ -17,12 +17,12 @@ fun main (){
     }
     println(res)*/
 
-
+/*
         val array: Array<Int?> = arrayOf(5, 8, 10)
         array[0] = null
-        println(array[0])
+        println(array[0])*/
 
-    val list = listOf(5)
+// val list = listOf(5)
 
 
     val array1 = arrayOf(5,5,7)
