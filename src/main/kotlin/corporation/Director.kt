@@ -1,9 +1,10 @@
 package corporation
 
 class Director(
+    id:Int,
      name:String,
      age :Int =0
-): Worker(name=name,age=age)
+): Worker(id,name=name,age=age,Position.DIRECTOR)
 {
     fun takeCoffe(assistant: Assistant)
     {
@@ -14,5 +15,10 @@ class Director(
     {
     val count= consultant.serveClient()
     println("The consultant ${consultant.name} served  $count customers")
+    }
+
+    override fun work() {
+        println("Im director $name " )
+
     }
 }

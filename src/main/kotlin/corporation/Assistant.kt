@@ -1,9 +1,10 @@
 package corporation
 
 class Assistant(
+    id: Int,
     name:String,
     age :Int =0
-): Worker(name=name,age=age){
+): Worker(id=id, name=name,age=age,Position.ASSISTANT){
     fun bringCoffee(drinkName: String ="Cappuccino",count: Int=1):String  {
         repeat(count){
             println("$name is getting up")
@@ -16,4 +17,7 @@ class Assistant(
         return drinkName
     }
 
+    override fun work() {
+        println("Im  making coffee")
+    }
 }
