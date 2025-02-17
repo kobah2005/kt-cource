@@ -11,6 +11,6 @@ fun main(){
 //    for (emploee in workers){
 //        emploee.work()
 //    }
-    val accountant= Accountant("Helga",30)
+    val accountant= Accountant(101,"Helga",30)
     accountant.work()
 }
