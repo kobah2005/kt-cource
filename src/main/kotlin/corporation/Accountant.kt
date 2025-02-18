@@ -70,7 +70,7 @@ class Accountant(id:Int,name:String,age: Int): Worker(id, name,age, Position.ACC
         }
     }
     fun readAllItems():MutableList<ProductCard>{
-        val result = MutableList<ProductCard>()
+        val result = mutableListOf<ProductCard>()
         val productsAsText =goodsFile.readText().trim().split("\n")
         if (productsAsText.isEmpty()) return result
 
@@ -95,18 +95,15 @@ class Accountant(id:Int,name:String,age: Int): Worker(id, name,age, Position.ACC
         items.removeAt(rmIndex)
         goodsFile.writeText("")
         for (item in items){
-            item.type
             val productCard= when( item.type){
                 ProductType.FOOD -> {
-                    "${item.name}%${item.brand}%${item.price}%${item. Food.}%FOOD"
+                    "${item.name}%${item.brand}%${item.price}%${(item as Food).caloreies}%FOOD"
                 }
                 ProductType.APPLIENCE -> {print("Enter the product wattage: ")
-                    val prodWattage= readln().toInt()
-                    "${prodName}%${prodBrand}%${prodPrice}%${prodWattage}%APPLIENCE"
+                    "${item.name}%${item.brand}%${item.price}%${(item as Applience).wattage}%APPLIENCE"
                 }
                 ProductType.SHOES ->  { print("Enter the product size: ")
-                    val prodSize= readln().toFloat()
-                    "${prodName}%${prodBrand}%${prodPrice}%${prodSize}%SHOES"
+                    "${item.name}%${item.brand}%${item.price}%${(item as Shoes).size}%SHOES"
                 }
             }
             goodsFile.appendText(productCard)
