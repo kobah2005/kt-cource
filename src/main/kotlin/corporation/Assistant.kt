@@ -10,7 +10,7 @@ class Assistant(
             println("$name is getting up")
             println("Go to Coffee machine")
             println("press the $drinkName button")
-            println("wait when coffee to be prepered")
+            println("wait when coffee to be prepared")
             println("Bring coffee to boss")
             println("Return to workplace")
         }

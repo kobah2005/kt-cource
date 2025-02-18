@@ -6,6 +6,6 @@ enum class OperationCode(val title:String) {
     SHOW_ALL_ITEMS("Все карточки"),
     DELETE_ITEM("Удалить товар"),
     ADD_EMPLOYEE("Принять сотрудника"),
-    FIRE_EMPLOYEE("Уваолить сотрудника"),
-    LIST_EMPLOYEE("печать списка сотрудников")
+    LIST_EMPLOYEE("Печать списка сотрудников"),
+    FIRE_EMPLOYEE("Уваолить сотрудника")
 }
