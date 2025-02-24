@@ -17,6 +17,7 @@ fun removeCompletedOrders(orders: List<Order>, typeToRemove: String): List<Order
         }
         return newOrdersList.toList()
     }
+    return newOrdersList.toList()
 }
 /*
 
